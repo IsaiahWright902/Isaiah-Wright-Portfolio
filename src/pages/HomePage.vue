@@ -289,7 +289,7 @@
     <div class="row">
       <div class="col-xl-6">
         <p class="descriptive-text pt-3">
-          UWRG Leads is a web app that helps marketers at UWRG(United Water
+          UWRG Leads is a web app that helps marketers at UWRG (United Water
           Restoration Group) organize leads and referrals in live time. Using
           socket.io and programable text SMS UWRG Leads is able to keep everyone
           on the same page at all times. A referrer signs up with a marketer

@@ -5,11 +5,13 @@
   <main>
     <router-view />
   </main>
+  <Footer></Footer>
 </template>
 
 <script>
 import { computed, reactive } from "vue";
 import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 export default {
   name: "App",
   setup() {
@@ -17,6 +19,7 @@ export default {
   },
   components: {
     Navbar,
+    Footer,
   },
 };
 </script>

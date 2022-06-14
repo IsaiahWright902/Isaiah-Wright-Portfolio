@@ -218,9 +218,12 @@
       </div>
     </div>
     <div class="row pt-3">
-      <div class="col-lg-6" style="position: relative">
+      <div class="col-xl-6" style="position: relative">
         <div class="center-tablet-tab-port">
           <img
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="500"
             class="img-fluid wde-tablet"
             src="../assets/img/wde-tablet.png"
             alt=""
@@ -228,12 +231,15 @@
         </div>
 
         <img
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="500"
           class="img-fluid wde-phone"
           src="../assets/img/wde-phone.png"
           alt=""
         />
       </div>
-      <div class="col-lg-6">
+      <div class="col-xl-6">
         <p class="project-heading text-center pt-3">Water Damage Estimator</p>
         <p class="descriptive-text pt-3">
           In the past it took field technicians upwards of 30 minutes to create
@@ -259,7 +265,12 @@
         </p>
 
         <p class="experience-heading pt-3 text-center">Technologies Used:</p>
-        <div class="technologies-container">
+        <div
+          class="technologies-container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
+        >
           <p class="skills-additional">Vue 3</p>
           <p class="skills-additional">Node.js</p>
           <p class="skills-additional">Express.js</p>
@@ -271,12 +282,12 @@
       </div>
     </div>
     <div class="row pt-5">
-      <div class="col-lg-6 text-center">
+      <div class="col-xl-6 text-center">
         <p class="project-heading pt-3">UWRG Leads</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-xl-6">
         <p class="descriptive-text pt-3">
           UWRG Leads is a web app that helps marketers at UWRG organize leads
           and referrals in live time. Using socket.io and programable text SMS
@@ -296,7 +307,7 @@
           UWRG Leads.
         </p>
       </div>
-      <div class="col-lg-6">
+      <div class="col-xl-6">
         <div
           id="carouselExampleControls"
           class="carousel slide"
@@ -349,7 +360,12 @@
     <div class="row pt-3">
       <div class="col-12">
         <p class="experience-heading text-center">Technologies Used:</p>
-        <div class="technologies-container">
+        <div
+          class="technologies-container"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+        >
           <p class="skills-additional">Vite (Vue.js)</p>
           <p class="skills-additional">Node.js</p>
           <p class="skills-additional">Express.js</p>
@@ -371,32 +387,53 @@
         </p>
       </div>
     </div>
-    <form action="">
+    <form @submit.prevent="sendMessage">
       <div class="row pt-3">
         <div class="col-md-6">
           <label>Name</label>
-          <input type="text" class="form-control" />
+          <input
+            name="name"
+            v-model="state.name"
+            type="text"
+            class="form-control"
+          />
         </div>
         <div class="col-md-6">
           <label>Email</label>
-          <input type="text" class="form-control" />
+          <input
+            name="email"
+            v-model="state.email"
+            type="text"
+            class="form-control"
+          />
         </div>
       </div>
       <div class="row pt-3">
         <div class="col-md-6">
           <label>Company</label>
-          <input type="text" class="form-control" />
+          <input
+            name="company"
+            v-model="state.company"
+            type="text"
+            class="form-control"
+          />
         </div>
         <div class="col-md-6">
           <label>Role</label>
-          <input type="text" class="form-control" />
+          <input
+            name="role"
+            v-model="state.role"
+            type="text"
+            class="form-control"
+          />
         </div>
       </div>
       <div class="row pt-3">
         <div class="col-12">
           <label>Message</label>
           <textarea
-            name=""
+            name="message"
+            v-model="state.message"
             id=""
             cols="30"
             rows="10"
@@ -407,22 +444,67 @@
       </div>
       <div class="row pt-3">
         <div class="col-12 text-center">
-          <button class="btn btn--green-rounded">Send Message</button>
+          <button type="submit" id="sendButton" class="btn btn--green-rounded">
+            Send Message
+          </button>
         </div>
       </div>
     </form>
+    <div class="row pt-5">
+      <div class="col-12 text-center">
+        <h2 class="section-heading">Thanks For Reviewing My Page!</h2>
+        <p class="hero-text hero-text-small">
+          Im looking forward to hearing from you in the near future :)
+        </p>
+      </div>
+    </div>
+    <div class="row pt-5"></div>
   </div>
-  <div class="row" style="padding-top: 10000px"></div>
 </template>
 
 <script>
 import { computed, onMounted, reactive } from "vue";
+import emailjs from "@emailjs/browser";
+
 export default {
   name: "Home",
   setup() {
-    const state = reactive({});
+    const state = reactive({
+      name: "",
+      email: "",
+      company: "",
+      role: "",
+      message: "",
+    });
     return {
       state,
+      sendMessage(e) {
+        try {
+          emailjs.sendForm(
+            "service_dqx1tu1",
+            "template_zb0vluj",
+            e.target,
+            "user_tYgYSfElJjF8aE5hTX1ws",
+            {
+              name: this.name,
+              email: this.email,
+              company: this.company,
+              role: this.role,
+              message: this.message,
+            }
+          );
+        } catch (error) {
+          console.log(error);
+        }
+        state.name = "";
+        state.email = "";
+        state.company = "";
+        state.role = "";
+        state.message = "";
+        let btn = document.getElementById("sendButton");
+        btn.innerText = "Message Sent! Thank you!";
+        btn.disabled = true;
+      },
     };
   },
 };
@@ -432,7 +514,7 @@ export default {
 @import "../assets/scss/main.scss";
 .container-fluid {
   width: 90%;
-  height: 80vh;
+  // height: 80vh;
   @include respond(phone) {
     width: 100%;
   }

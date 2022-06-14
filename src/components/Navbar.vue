@@ -35,9 +35,52 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Resume</a>
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              class="nav-link"
+              href="#"
+              >Resume</a
+            >
           </li>
         </ul>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Isaiah Wright - Resume
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" style="position: relative">
+              <iframe
+                height="1000"
+                width="1000"
+                src="Isaiah_Wright_Resume.pdf"
+                class="responsive-iframe"
+                frameborder="0"
+              >
+                <p>It appears your web browser doesn't support iframes.</p>
+              </iframe>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -45,6 +88,7 @@
 
 <script>
 import { computed, onMounted, reactive } from "vue";
+// import Isaiah_Wright_Resume from "./Isaiah_Wright_Resume.pdf";
 export default {
   name: "Navbar",
   setup() {
@@ -104,5 +148,20 @@ nav {
 .nav-item {
   font-size: 18px;
   font-weight: 400;
+}
+
+.modal-body {
+  position: relative;
+  height: 1000px;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>

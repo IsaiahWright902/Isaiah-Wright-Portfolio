@@ -16,9 +16,9 @@
   &:active {
     outline: none;
   }
-  @include respond(tablet) {
-    margin-top: 20px;
-  }
+  // @include respond(tablet) {
+  //   margin-top: 20px;
+  // }
   @include respond(phone) {
     border: 0.5px solid rgba(0, 0, 0, 0.2);
   }

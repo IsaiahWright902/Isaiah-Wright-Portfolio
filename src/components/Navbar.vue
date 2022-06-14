@@ -36,51 +36,13 @@
           </li>
           <li class="nav-item">
             <a
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              target="blank"
               class="nav-link"
-              href="#"
+              href="https://github.com/IsaiahWright902/Resume/blob/master/Isaiah_Wright_Resume.PDF"
               >Resume</a
             >
           </li>
         </ul>
-      </div>
-
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Isaiah Wright - Resume
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body" style="position: relative">
-              <iframe
-                height="1000"
-                width="1000"
-                src="Isaiah_Wright_Resume.pdf"
-                class="responsive-iframe"
-                frameborder="0"
-              >
-                <p>It appears your web browser doesn't support iframes.</p>
-              </iframe>
-            </div>
-            <div class="modal-footer"></div>
-          </div>
-        </div>
       </div>
     </div>
   </nav>

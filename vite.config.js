@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  // base: "/basic-website-template/",
+  // base: "/Isaiah-Wright-Portfolio/",
   server: {
     port: "8080",
   },

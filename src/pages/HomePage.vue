@@ -13,16 +13,16 @@
           is the process and how does this work? These questions would swirl
           around my head and I was determined to find an answer. The more
           knowledge I gained about computers, I found myself wanting to
-          understand them further and begin building applications.
+          understand them further and began building applications.
         </p>
         <p class="descriptive-text pt-4">
           To my luck there was a great coding bootcamp in my area where I could
           go to professionally grow my skills. I went through the 13 week
           program, every week asking myself even more questions. As I learned
-          even more about the industry I fell in love with it even more. I
-          enjoyed learning how to develop applications, making me realize that
-          software development was a passion of mine. I love what i do, and I
-          strive to make everything I work on the best it can be.
+          about the industry I fell in love with it even more. I enjoyed
+          learning how to develop applications, making me realize that software
+          development was a passion of mine. I love what i do, and I strive to
+          make everything I work on the best it can be.
         </p>
       </div>
       <div class="col-xl-6 text-center order-xl-1">

@@ -195,7 +195,7 @@
         <p class="skills-additional">Knowledge of C#</p>
         <!-- <p class="skills-additional">Knowledge of .Net</p> -->
         <p class="skills-additional">PHP</p>
-        <p class="skills-additional">MySql</p>
+        <p class="skills-additional">MySQL</p>
       </div>
       <div class="col-md-4 text-center">
         <p class="experience-heading">Additional Technologies:</p>

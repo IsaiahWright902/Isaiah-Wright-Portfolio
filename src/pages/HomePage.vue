@@ -183,7 +183,7 @@
         <img class="skill-logo" src="../assets/img/Skills/vuejs.png" alt="" />
       </div>
       <div class="col-md-3 col-6">
-        <img class="skill-logo" src="../assets/img/Skills/css3.png" alt="" />
+        <img class="skill-logo" src="../assets/img/Skills/react.png" alt="" />
       </div>
       <div class="col-md-3 col-6">
         <img class="skill-logo" src="../assets/img/Skills/github.png" alt="" />

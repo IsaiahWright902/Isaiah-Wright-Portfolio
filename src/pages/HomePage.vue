@@ -308,7 +308,7 @@
         </p>
       </div>
       <div class="col-xl-6">
-        <div
+        <!-- <div
           id="carouselExampleControls"
           class="carousel slide"
           data-bs-ride="carousel"
@@ -354,20 +354,20 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-        </div>
+        </div> -->
+        <div class="pt-3"></div>
+        <iframe
+          width="100%"
+          height="400"
+          src="https://www.youtube.com/embed/-Pts2HtDFhM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
-    <div class="row pt-3 text-center">
-      <iframe
-        width="400"
-        height="400"
-        src="https://www.youtube.com/embed/-Pts2HtDFhM"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
+    <div class="row pt-3 text-center"></div>
     <div class="row pt-3">
       <div class="col-12">
         <p class="experience-heading text-center">Technologies Used:</p>

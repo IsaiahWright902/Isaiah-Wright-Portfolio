@@ -38,7 +38,7 @@
             <a
               target="blank"
               class="nav-link"
-              href="https://github.com/IsaiahWright902/Resume/blob/master/Isaiah_Wright_Resume.PDF"
+              href="https://github.com/IsaiahWright902/Resume/blob/215ee8da53acc922be5782ee51cce69cd891a57b/Isaiah%20Resume.pdf"
               >Resume</a
             >
           </li>

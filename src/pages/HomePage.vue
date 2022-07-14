@@ -64,24 +64,61 @@
                 />
               </div>
               <div class="col-xl-11">
-                <p class="experience-heading">Full-Stack Developer</p>
+                <p class="experience-heading">Technical Project Manager</p>
                 <p class="experience-company">United Water Restoration Group</p>
-                <p class="experience-heading-2nd">April 2021 - Present</p>
+                <p class="experience-heading-2nd">June 2022 - Present</p>
                 <p class="experience-heading-2nd">
                   Ormond Beach, Florida, United States
                 </p>
                 <p class="experience-responsibilities">
-                  Helped develop a first of its kind full stack application
-                  called the Water Damage Estimator.
+                  Manage and administer all aspects of front-end and back-end
+                  development infrastructure. Spearhead multiple projects'
+                  development from conception to completion. Develop product
+                  goals and requirements in close collaboration with management
+                  and other associates. Maintain project timeframes, budget
+                  estimates, and status reports. Establish and execute training
+                  processes for all technical personnel.
                 </p>
                 <p class="experience-responsibilities">
-                  Gave multiple presentations on the Water Damage Estimator all
-                  over Florida.
+                  - Improved performance and incorporated new features by
+                  modifying design parameters.
                 </p>
                 <p class="experience-responsibilities">
-                  First in house developer to be hired in company wide.
+                  - Created two full-stack applications from concept to
+                  production individually.
                 </p>
                 <p class="experience-responsibilities">
+                  - Enabled implementation of new and optimized company
+                  processes.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-1"></div>
+              <div class="col-xl-11">
+                <p class="experience-heading">Full-Stack Developer</p>
+                <p class="experience-company">United Water Restoration Group</p>
+                <p class="experience-heading-2nd">April 2021 - June 2022</p>
+                <p class="experience-heading-2nd">
+                  Ormond Beach, Florida, United States
+                </p>
+                <p class="experience-responsibilities">
+                  Reviewed code, debugged errors, and troubleshot issues.
+                  Developed and designed front-end web architecture while
+                  ensuring application responsiveness. Engaged with graphic
+                  designers on web design features. Created and administered
+                  functional databases and applications. Met and exceeded
+                  technical and consumer needs.
+                </p>
+                <p class="experience-responsibilities">
+                  - Devised and implemented project plans and multiple utility
+                  applications in line with business needs.
+                </p>
+                <p class="experience-responsibilities">
+                  - Oversaw project development milestones from initial steps
+                  through final delivery.
+                </p>
+                <!-- <p class="experience-responsibilities">
                   In charge of front end and back end development infrastructure
                   and management.
                 </p>
@@ -97,7 +134,7 @@
                 <p class="experience-responsibilities">
                   Assisted the marketing team in the design and the deployment
                   of multiple PPC pages.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -613,11 +650,7 @@ export default {
 
 .experience-responsibilities {
   font-size: 18px;
-  line-height: 0.9;
 
-  &::before {
-    content: "-";
-  }
   @include respond(phone) {
     font-size: 14px;
   }

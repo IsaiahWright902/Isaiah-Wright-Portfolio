@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid pt-5">
+  <div class="container pt-5">
     <div class="row pt-5 reverse-row-mobile">
       <div class="col-xl-6 order-1">
         <h1 class="hero-text">
@@ -51,6 +51,7 @@
         <h2 class="section-heading">Experience:</h2>
       </div>
     </div>
+
     <div class="row pt-4">
       <div class="col-12">
         <div class="card">
@@ -70,7 +71,7 @@
                 <p class="experience-heading-2nd">
                   Ormond Beach, Florida, United States
                 </p>
-                <p class="experience-responsibilities">
+                <!-- <p class="experience-responsibilities">
                   Manage and administer all aspects of front-end and back-end
                   development infrastructure. Spearhead multiple projects'
                   development from conception to completion. Develop product
@@ -78,6 +79,10 @@
                   and other associates. Maintain project timeframes, budget
                   estimates, and status reports. Establish and execute training
                   processes for all technical personnel.
+                </p> -->
+                <p class="experience-responsibilities">
+                  - Manage and administer all aspects of front-end and back-end
+                  development infrastructure.
                 </p>
                 <p class="experience-responsibilities">
                   - Improved performance and incorporated new features by
@@ -86,6 +91,10 @@
                 <p class="experience-responsibilities">
                   - Created two full-stack applications from concept to
                   production individually.
+                </p>
+                <p class="experience-responsibilities">
+                  - Develop product goals and requirements in close
+                  collaboration with management and other associates.
                 </p>
                 <p class="experience-responsibilities">
                   - Enabled implementation of new and optimized company
@@ -97,19 +106,19 @@
               <div class="col-xl-1"></div>
               <div class="col-xl-11">
                 <p class="experience-heading">Full-Stack Developer</p>
-                <p class="experience-company">United Water Restoration Group</p>
+                <!-- <p class="experience-company">United Water Restoration Group</p> -->
                 <p class="experience-heading-2nd">April 2021 - June 2022</p>
                 <p class="experience-heading-2nd">
                   Ormond Beach, Florida, United States
                 </p>
-                <p class="experience-responsibilities">
+                <!-- <p class="experience-responsibilities">
                   Reviewed code, debugged errors, and troubleshot issues.
                   Developed and designed front-end web architecture while
                   ensuring application responsiveness. Engaged with graphic
                   designers on web design features. Created and administered
                   functional databases and applications. Met and exceeded
                   technical and consumer needs.
-                </p>
+                </p> -->
                 <p class="experience-responsibilities">
                   - Devised and implemented project plans and multiple utility
                   applications in line with business needs.
@@ -190,6 +199,7 @@
         <h2 class="section-heading">Skills & Strengths:</h2>
       </div>
     </div>
+
     <div class="row pt-5 text-center">
       <div class="col-md-3 col-6">
         <img
@@ -226,27 +236,33 @@
         <img class="skill-logo" src="../assets/img/Skills/github.png" alt="" />
       </div>
     </div>
-    <div class="row pt-4">
-      <div class="col-md-4 text-center">
-        <p class="experience-heading">Additional Languages:</p>
-        <p class="skills-additional">Knowledge of C#</p>
-        <!-- <p class="skills-additional">Knowledge of .Net</p> -->
-        <p class="skills-additional">PHP</p>
-        <p class="skills-additional">MySQL</p>
+    <div class="row pt-1">
+      <div class="col-md-4 pt-4 text-center">
+        <div class="card">
+          <p class="experience-heading">Additional Languages:</p>
+          <p class="skills-additional">Knowledge of C#</p>
+          <!-- <p class="skills-additional">Knowledge of .Net</p> -->
+          <p class="skills-additional">PHP</p>
+          <p class="skills-additional">MySQL</p>
+        </div>
       </div>
-      <div class="col-md-4 text-center">
-        <p class="experience-heading">Additional Technologies:</p>
-        <p class="skills-additional">Express</p>
-        <p class="skills-additional">Mongoose</p>
-        <!-- <p class="skills-additional">Mongo DB</p> -->
-        <p class="skills-additional">Vite</p>
-        <p class="skills-additional">Heroku</p>
+      <div class="col-md-4 pt-4 text-center">
+        <div class="card">
+          <p class="experience-heading">Additional Technologies:</p>
+          <p class="skills-additional">Express</p>
+          <p class="skills-additional">Mongoose</p>
+          <!-- <p class="skills-additional">Mongo DB</p> -->
+          <p class="skills-additional">Vite</p>
+          <p class="skills-additional">Heroku</p>
+        </div>
       </div>
-      <div class="col-md-4 text-center">
-        <p class="experience-heading">Personal Skills:</p>
-        <p class="skills-additional">Communication</p>
-        <p class="skills-additional">Problem Solving</p>
-        <p class="skills-additional">Critical Thinking</p>
+      <div class="col-md-4 pt-4 text-center">
+        <div class="card">
+          <p class="experience-heading">Personal Skills:</p>
+          <p class="skills-additional">Communication</p>
+          <p class="skills-additional">Problem Solving</p>
+          <p class="skills-additional">Critical Thinking</p>
+        </div>
       </div>
     </div>
     <div class="row pt-5">
@@ -523,9 +539,17 @@ export default {
       company: "",
       role: "",
       message: "",
+      skills: [
+        {
+          name: "JavaScript",
+          logo: "../assets/img/Skills/javascript.png",
+          id: 1,
+        },
+      ],
     });
     return {
       state,
+      skills: computed(() => state.skills),
       sendMessage(e) {
         try {
           emailjs.sendForm(
@@ -595,8 +619,15 @@ export default {
   clip-path: circle();
   overflow: hidden;
   margin-top: -8%;
-  @include respond(phone) {
+  transition: all 0.5s;
+  @include respond(tab-port) {
     width: 350px;
+  }
+  @include respond(tablet) {
+    width: 300px;
+  }
+  @include respond(phone) {
+    width: 250px;
   }
 }
 
@@ -632,16 +663,19 @@ export default {
   font-size: 24px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  // margin-bottom: 3px;
 }
 
 .experience-company {
   font-size: 22px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  // margin-bottom: 3px;
 }
 
 .experience-heading-2nd {
   font-size: 20px;
+  // margin-bottom: 5px;
   color: rgba(0, 0, 0, 0.6);
   @include respond(phone) {
     font-size: 20px;
@@ -650,7 +684,6 @@ export default {
 
 .experience-responsibilities {
   font-size: 18px;
-
   @include respond(phone) {
     font-size: 14px;
   }

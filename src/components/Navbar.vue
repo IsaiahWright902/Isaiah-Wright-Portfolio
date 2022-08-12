@@ -1,6 +1,12 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+  <nav
+    :class="{
+      'navbar navbar-expand-lg navbar-dark bg-dark': state.showNav,
+      'navbar navbar-expand-lg navbar-dark bg-dark navbar--hidden':
+        !state.showNav,
+    }"
+  >
+    <div class="container">
       <a class="navbar-brand mx-2" href="#"
         >Isaiah Wright <span class="small-brand"> - Full Stack Developer</span>
       </a>
@@ -50,26 +56,56 @@
 
 <script>
 import { computed, onMounted, reactive } from "vue";
-// import Isaiah_Wright_Resume from "./Isaiah_Wright_Resume.pdf";
 export default {
   name: "Navbar",
   setup() {
-    const state = reactive({});
+    const state = reactive({
+      showNav: true,
+      scrollValue: 0,
+      lastScrollPosition: 0,
+      onScroll() {
+        if (window.scrollY < 0) {
+          return;
+        }
+        if (
+          Math.abs(window.scrollY - state.lastScrollPosition) <
+          state.scrollValue
+        ) {
+          return;
+        }
+        state.showNav = window.scrollY < state.lastScrollPosition;
+        state.lastScrollPosition = window.scrollY;
+      },
+    });
+    onMounted(async () => {
+      state.lastScrollPosition = window.scrollY;
+      window.addEventListener("scroll", state.onScroll);
+      const viewportMeta = document.createElement("meta");
+      viewportMeta.name = "viewport";
+      viewportMeta.content = "width=device-width, initial-scale=1";
+      document.head.appendChild(viewportMeta);
+    });
     return {
       state,
     };
   },
+  methods: {},
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/scss/main.scss";
 
+.navbar.navbar--hidden {
+  transform: translate3d(0, -100%, 0);
+}
+
 nav {
   font-family: "Montserrat", sans-serif;
   position: fixed;
   width: 100%;
   z-index: 100000;
+  transition: all 0.5s;
 }
 
 .container-fluid {

@@ -739,7 +739,7 @@ export default {
 // WDE
 .wde-phone {
   position: absolute;
-  width: 500px;
+  width: 400px;
   left: 41%;
   // bottom: -5%;
   top: 35%;
@@ -752,7 +752,7 @@ export default {
   }
 }
 .wde-tablet {
-  width: 575px;
+  width: 500px;
   @include respond(laptop) {
     width: 500px;
   }

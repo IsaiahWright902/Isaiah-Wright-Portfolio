@@ -451,6 +451,8 @@
         </div>
       </div>
     </div>
+    <!-- Cool Buttons -->
+    <CoolButtons />
     <div class="row pt-5">
       <div class="col-12">
         <h2 class="section-heading">Contact Me:</h2>
@@ -537,7 +539,7 @@
 <script>
 import { computed, onMounted, reactive } from "vue";
 import emailjs from "@emailjs/browser";
-
+import CoolButtons from "../components/CoolButtons.vue";
 export default {
   name: "Home",
   setup() {
@@ -586,6 +588,9 @@ export default {
         btn.disabled = true;
       },
     };
+  },
+  components: {
+    CoolButtons,
   },
 };
 </script>

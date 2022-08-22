@@ -19,13 +19,13 @@
     </div>
   </div>
 
-  <div class="row pt-3">
-    <div class="col-md-4">
+  <div class="row pt-1">
+    <div class="col-md-4 pt-2">
       <div class="card">
         <div class="card-body">
           <div class="row">
             <div class="col-12 text-center">
-              <p>Change Color:</p>
+              <p class="dropdownHeading">Change Color:</p>
               <select
                 v-model="state.buttonColor"
                 class="form-select"
@@ -53,12 +53,12 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 pt-2">
       <div class="card">
         <div class="card-body">
           <div class="row">
             <div class="col-12 text-center">
-              <p>Change Style:</p>
+              <p class="dropdownHeading">Change Style:</p>
               <select
                 v-model="state.buttonStyle"
                 class="form-select"
@@ -83,12 +83,12 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 pt-2">
       <div class="card">
         <div class="card-body">
           <div class="row">
             <div class="col-12 text-center">
-              <p>Additional Modifiers:</p>
+              <p class="dropdownHeading">Additional Modifiers:</p>
               <select
                 v-model="state.buttonModifiers"
                 class="form-select"
@@ -161,6 +161,9 @@ export default {
 .project-heading {
   font-size: 50px;
   font-weight: 300;
+  @include respond(tablet) {
+    text-align: center;
+  }
 }
 
 .card {
@@ -174,8 +177,15 @@ export default {
   @include respond(tab-port) {
     text-align: center;
   }
+  @include respond(tablet) {
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4);
+  }
   @include respond(phone) {
     border: none;
   }
+}
+
+.dropdownHeading {
+  font-weight: 700;
 }
 </style>

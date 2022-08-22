@@ -3,13 +3,18 @@
     <div class="col-12">
       <p class="project-heading">Flexible Buttons</p>
       <p class="descriptive-text">
-        One day at work I got tired of creating multiple button classes for
-        specific buttons and thought to myself; why don't I just make a SCSS
-        file full of button styles that can handle any color, size, or shape
-        that I need. Well, thats exactly what I did! Below there is a button,
-        you can easily change this buttons style and modify by just slightly
-        altering the class name. For simplicity's sake I have added dropdowns so
-        you can just pick what you want. Enjoy :)
+        One day at work I looked at a file I was working in and realized there
+        were way to many custom button classes. I needed pretty custom buttons
+        that gave the application that unique look, but did it have to come at
+        the price of messy CSS that was hard to navigate? I thought to myself;
+        why don't I just make a SCSS file full of button styles that can handle
+        any color, size, or shape that I need. That way I can export the file
+        globally and have beautiful buttons throughout my entire application
+        that are that if needed can be completely changed by editing one class
+        in the button file. Well, thats exactly what I did! Below this text i've
+        made a small demo so you can see the flexibility of these buttons. You
+        can easily change the below buttons style by selecting different options
+        from the dropdowns. Enjoy :)
       </p>
     </div>
   </div>

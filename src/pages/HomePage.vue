@@ -355,9 +355,10 @@
           socket.io and programable text SMS UWRG Leads is able to keep everyone
           on the same page at all times. A referrer signs up with a marketer
           they are familiar with and is then able to submit leads directly to
-          the marketer. Each time a lead is submitted it sends a link to the
-          lead details via sms directly to the marketer. It is then received and
-          processed automatically syncing to a company google sheet.
+          that marketer. Each time a lead is submitted it sends a link to the
+          lead details is sent directly to the marketer via sms. It is then
+          received and processed automatically syncing to a company google
+          sheet.
         </p>
         <p class="descriptive-text pt-3">
           This is my second solo full-stack application at United Water

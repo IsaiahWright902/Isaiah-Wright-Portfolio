@@ -10,10 +10,10 @@
         why don't I just make a SCSS file full of button styles that can handle
         any color, size, or shape that I need. That way I can export the file
         globally and have beautiful buttons throughout my entire application
-        that are that if needed can be completely changed by editing one class
-        in the button file. Well, thats exactly what I did! Below this text i've
-        made a small demo so you can see the flexibility of these buttons. You
-        can easily change the below buttons style by selecting different options
+        that if needed can be completely changed by editing one class in the
+        button file. Well, thats exactly what I did! Below this text i've made a
+        small demo so you can see the flexibility of these buttons. You can
+        easily change the below buttons style by selecting different options
         from the dropdowns. Enjoy :)
       </p>
     </div>

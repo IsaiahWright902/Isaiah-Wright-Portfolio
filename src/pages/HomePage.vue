@@ -654,6 +654,9 @@ export default {
   border-radius: 40px;
   padding: 2rem 0;
   line-height: 1;
+  color: white;
+  background-image: linear-gradient(19deg, #434343 0%, #000000 100%);
+
   transition: all 0.5s;
   @include respond(tab-port) {
     text-align: center;
@@ -690,7 +693,8 @@ export default {
 .experience-heading-2nd {
   font-size: 20px;
   // margin-bottom: 5px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(white, 0.6);
+  // color: rgba(0, 0, 0, 0.6);
   @include respond(phone) {
     font-size: 20px;
   }
@@ -741,6 +745,9 @@ export default {
   & p {
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4);
     border-radius: 40px;
+    color: white;
+    background-image: linear-gradient(19deg, #434343 0%, #000000 100%);
+
     // padding: 7.5px;
     padding: 0.75rem 1.25rem !important;
   }

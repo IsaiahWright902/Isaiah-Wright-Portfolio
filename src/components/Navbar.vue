@@ -149,6 +149,11 @@ nav {
   }
 }
 .navbar {
+  background-image: linear-gradient(
+    19deg,
+    #434343 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
   background-color: rgba(0, 0, 0, 0.85) !important;
 }
 

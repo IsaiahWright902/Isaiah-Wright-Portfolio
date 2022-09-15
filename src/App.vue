@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { computed, reactive } from "vue";
+import { reactive } from "vue";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 export default {

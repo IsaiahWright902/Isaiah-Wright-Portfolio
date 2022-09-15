@@ -55,7 +55,6 @@
         <div class="card">
           <p class="experience-heading">Additional Languages:</p>
           <p class="skill-text">Knowledge of C#</p>
-          <!-- <p class="skill-text">Knowledge of .Net</p> -->
           <p class="skill-text">PHP</p>
           <p class="skill-text">MySQL</p>
         </div>
@@ -65,7 +64,6 @@
           <p class="experience-heading">Additional Technologies:</p>
           <p class="skill-text">Express</p>
           <p class="skill-text">Mongoose</p>
-          <!-- <p class="skill-text">Mongo DB</p> -->
           <p class="skill-text">Vite</p>
           <p class="skill-text">Heroku</p>
         </div>

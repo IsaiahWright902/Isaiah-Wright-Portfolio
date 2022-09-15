@@ -89,7 +89,7 @@
 </template>
 
 <script>
-import { computed, onMounted, reactive } from "vue";
+import { onMounted, reactive } from "vue";
 export default {
   name: "Navbar",
   setup() {
@@ -123,7 +123,6 @@ export default {
       state,
     };
   },
-  methods: {},
 };
 </script>
 
